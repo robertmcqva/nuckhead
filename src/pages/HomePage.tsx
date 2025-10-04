@@ -103,18 +103,6 @@ export const HomePage: React.FC = () => {
               <div className="text-sm text-gray-600">Happy Developers</div>
             </div>
           </div>
-          
-          {/* Trust indicators */}
-          <div className="mt-16 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-            <p className="text-sm text-gray-500 mb-4">Trusted by teams at</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              {['Google', 'Microsoft', 'GitHub', 'Vercel', 'Linear'].map((company, index) => (
-                <div key={index} className="text-lg font-semibold text-gray-400 hover:text-gray-600 transition-colors">
-                  {company}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
         
         {/* Enhanced Scroll indicator */}
@@ -602,18 +590,6 @@ export const HomePage: React.FC = () => {
               <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
               <div className="text-gray-300 text-sm">Uptime SLA</div>
               <div className="text-xs text-gray-400 mt-1">Enterprise reliability</div>
-            </div>
-          </div>
-          
-          {/* Trust indicators */}
-          <div className="mt-16 pt-8 border-t border-white/10">
-            <p className="text-sm text-gray-400 mb-6">Trusted by developers at</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              {['Google', 'Microsoft', 'GitHub', 'Vercel', 'Linear'].map((company, index) => (
-                <div key={index} className="text-lg font-semibold text-gray-300 hover:text-white transition-colors">
-                  {company}
-                </div>
-              ))}
             </div>
           </div>
         </div>
