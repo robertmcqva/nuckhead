@@ -64,7 +64,6 @@
 
 ✅ **New Components Added**
 - LoadingSpinner with multiple variants
-- Breadcrumb navigation
 - Toast notifications
 - Enhanced form inputs
 

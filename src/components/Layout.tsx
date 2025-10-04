@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { User, ChevronDown, Code2, Sparkles, Github, Twitter, Linkedin, Instagram, ArrowRight, Star, Zap, Heart, Users, Globe, MessageCircle, BookOpen } from 'lucide-react'
-import { Breadcrumb } from './Breadcrumb'
-import { useBreadcrumbs, getBreadcrumbConfig } from '../hooks/useBreadcrumbs'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -12,8 +10,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [isUserMenuOpen, setIsUserMenuOpen] = React.useState(false)
   const location = useLocation()
-  const breadcrumbs = useBreadcrumbs()
-  const breadcrumbConfig = getBreadcrumbConfig(location.pathname)
   
   const isAuthPage = location.pathname.startsWith('/auth')
   const isDashboard = location.pathname.startsWith('/dashboard') || 
@@ -261,22 +257,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       )}
 
       <main className="flex-1">
-        {/* Simple breadcrumb navigation */}
-        {breadcrumbConfig.show && !isAuthPage && breadcrumbs.length > 0 && (
-          <Breadcrumb 
-            items={breadcrumbs}
-            showHome={breadcrumbConfig.showHome}
-          />
-        )}
-        
-        {/* Content with appropriate top spacing when breadcrumb is present */}
-        <div className={
-          breadcrumbConfig.show && !isAuthPage && breadcrumbs.length > 0 
-            ? 'pt-10 bg-gray-50' 
-            : ''
-        }>
-          {children}
-        </div>
+        {children}
       </main>
 
       {!isAuthPage && !isDashboard && (

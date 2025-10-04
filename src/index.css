@@ -148,32 +148,6 @@
     @apply text-brand-600 bg-brand-50;
   }
 
-  /* Breadcrumb Styles - Fixed Navigation Aid */
-  .breadcrumb-container {
-    @apply fixed top-16 left-0 right-0 z-30 bg-gray-50/98 backdrop-blur-md border-b border-gray-200/30 shadow-sm;
-  }
-  
-  .breadcrumb-item {
-    @apply inline-flex items-center px-2 py-1 text-xs text-gray-500 hover:text-gray-700 transition-all duration-200 rounded-md hover:bg-white/50;
-  }
-  
-  .breadcrumb-current {
-    @apply inline-flex items-center px-2 py-1 text-xs font-medium text-gray-700 bg-white/70 rounded-md shadow-xs border border-gray-200/40;
-  }
-  
-  .breadcrumb-separator {
-    @apply text-gray-300 mx-0.5;
-  }
-
-  /* Content spacing for fixed breadcrumb */
-  .breadcrumb-content-spacing {
-    @apply pt-12;
-  }
-
-  .breadcrumb-content-spacing-minimal {
-    @apply pt-10;
-  }
-  
   /* Modern Animations */
   .animate-float {
     animation: float 6s ease-in-out infinite;

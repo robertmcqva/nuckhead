@@ -94,7 +94,6 @@ This is a comprehensive sitemap for a professional web application built with Re
 - `Header` - Navigation header
 - `Sidebar` - Dashboard sidebar
 - `Footer` - Site footer
-- `Breadcrumbs` - Navigation breadcrumbs
 
 ### Page Components
 - `HomePage` - Landing page
