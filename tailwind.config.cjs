@@ -5,9 +5,58 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // Override default spacing with our 8px scale
+    spacing: {
+      0: '0',
+      1: '4px',     // 0.25rem - fine control
+      2: '8px',     // 0.5rem - base unit
+      3: '12px',    // 0.75rem
+      4: '16px',    // 1rem
+      5: '20px',    // 1.25rem
+      6: '24px',    // 1.5rem
+      8: '32px',    // 2rem
+      10: '40px',   // 2.5rem
+      12: '48px',   // 3rem
+      16: '64px',   // 4rem
+      20: '80px',   // 5rem
+      24: '96px',   // 6rem
+    },
+    // Override default font sizes with our modular scale
+    fontSize: {
+      xs: ['12px', '1.4'],
+      sm: ['14px', '1.4'],
+      base: ['16px', '1.5'],
+      lg: ['18px', '1.5'],
+      xl: ['20px', '1.5'],
+      '2xl': ['24px', '1.3'],
+      '3xl': ['30px', '1.2'],
+      '4xl': ['36px', '1.2'],
+      '5xl': ['48px', '1.1'],
+      '6xl': ['60px', '1.1'],
+    },
+    // Override default border radius
+    borderRadius: {
+      none: '0',
+      sm: '4px',
+      DEFAULT: '8px',
+      lg: '12px',
+      xl: '16px',
+      full: '9999px',
+    },
+    // Set container max-widths
+    container: {
+      center: true,
+      padding: '1.5rem', // 24px
+      screens: {
+        sm: '600px',
+        md: '960px',
+        lg: '1200px',
+        xl: '1440px',
+      },
+    },
     extend: {
       colors: {
-        // Brand Colors
+        // Brand Colors (following our design system)
         brand: {
           50: '#f0f9ff',
           100: '#e0f2fe',
@@ -25,38 +74,30 @@ module.exports = {
         success: {
           50: '#f0fdf4',
           100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
           500: '#22c55e',
           600: '#16a34a',
           700: '#15803d',
-          800: '#166534',
-          900: '#14532d'
         },
         warning: {
           50: '#fffbeb',
           100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
           500: '#f59e0b',
           600: '#d97706',
           700: '#b45309',
-          800: '#92400e',
-          900: '#78350f'
         },
         error: {
           50: '#fef2f2',
           100: '#fee2e2',
-          200: '#fecaca',
-          300: '#fca5a5',
-          400: '#f87171',
           500: '#ef4444',
           600: '#dc2626',
           700: '#b91c1c',
-          800: '#991b1b',
-          900: '#7f1d1d'
+        },
+        info: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
         },
         // Neutral Colors
         gray: {
